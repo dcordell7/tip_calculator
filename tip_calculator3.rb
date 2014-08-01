@@ -10,9 +10,9 @@ amount = base * percentage / 100
 return amount
 end
 
-tax_value = meal * tax/100
+tax_value = calculate_rate(meal, tax)
 meal_with_tax = meal + tax_value
-tip_value = meal * tip/100
+tip_value = calculate_rate(meal, tip)
 total_cost = meal_with_tax + tip_value
 
 print "Meal: $%.2f.\n" % meal
